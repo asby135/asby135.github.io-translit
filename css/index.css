@@ -1,0 +1,242 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.title {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: fit-content;
+  margin-top: 44px;
+}
+
+h1 {
+  margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: center;
+  letter-spacing: -0.08em;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+  margin-top: 86px;
+}
+
+form {
+  display: flex;
+  width: 500px;
+  padding: 8px 8px 8px 21px;
+  border: 2px solid black;
+  border-radius: 14px;
+}
+
+.formText {
+  border: 0;
+  width: 100%;
+  font-family: 'IBM Plex Mono', monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: -0.05em;
+  outline: none;
+}
+
+.formButton {
+  display: flex;
+  background-color: black;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  padding: 6px 12px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: -0.03em;
+  border-radius: 8px;
+}
+
+.formButton:hover {
+  transform: scale(1.03);
+  transition: 0.2s;
+}
+
+.formButton:active {
+  transform: scale(0.98);
+  transition: 0.5s;
+}
+
+.dictionary {
+  display: flex;
+  width: 500px;
+  height: fit-content;
+  flex-direction: row;
+}
+
+.column1 {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-right: 2px solid black;
+}
+
+.column2 {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.column1 ul,
+.column2 ul {
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  counter-reset: one;
+}
+
+.column1 li {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  align-items: center;
+}
+
+.column1 li::before {
+  content: counter(one);
+  counter-increment: one;
+  letter-spacing: -0.05em;
+  font-size: 14px;
+  color: #111111;
+  margin-left: 12px;
+}
+
+.column2 li {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  align-items: center;
+}
+
+.newDivText {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.newLine {
+  border-top: 1px solid black;
+}
+
+li p {
+  margin-left: 28px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 40px;
+  letter-spacing: -0.03em;
+  width: 83px;
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+li .fullText {
+  display: none;
+  font-size: 16px;
+  letter-spacing: -0.03em;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 8px 16px 10px;
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  max-width: 130px;
+  height: fit-content;
+  word-wrap: break-word;
+  line-height: 20px;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.7);
+  border: 0.5px solid black;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+li .delete {
+  background: none;
+  padding: 0;
+  border: none;
+  margin-right: 11px;
+  margin-left: auto;
+}
+
+li .delete:hover {
+  transform: scale(1.03);
+  transition: 0.2s;
+}
+
+li. .delete:active {
+  transform: scale(0.98);
+  transition: 0.5s;
+}
+
+.clear .deleteAll {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 6px 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: -0.05em;
+  border-radius: 8px;
+}
+
+.clear .deleteAll:hover {
+  transform: scale(1.03);
+  transition: 0.2s;
+}
+
+.clear .deleteAll:active {
+  transform: scale(0.98);
+  transition: 0.5s;
+}
+
+@media (max-width: 768px) {
+  form {
+    width: 328px;
+  }
+
+  .formText {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.05em;
+  }
+
+  .dictionary {
+    width: 328px;
+  }
+}
